@@ -4,5 +4,7 @@
 
 ### Jacinto Arias (jacinto.arias@uclm.es)
 
-Instrucciones y link a la charla próximamente
+Link a la charla
+
+https://www.youtube.com/watch?v=CJ3Px7mI7kY
 
