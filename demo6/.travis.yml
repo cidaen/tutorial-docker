@@ -1,0 +1,32 @@
+# Disclaimer: Este script es solo un ejemplo!
+# No está pensado para utilizarse o para funcionar!
+
+sudo: required
+
+env:
+  global:
+    - IMAGE_NAME=jacintoarias/myapp
+    - REGISTRY_USER=jacintoarias
+    - secret: "<something long>"
+
+services:
+  - docker
+
+before_script:
+  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+  - docker pull "$IMAGE_NAME" || true
+
+build:
+  script:
+    - docker build -t jacintoarias/myapp .
+
+test:
+   - docker build --env STAGE=TEST --tag "$IMAGE_NAME":test .
+   - docker run $IMAGE_NAME
+
+deploy:
+  script: 
+    - docker build --env STAGE=PROD --tag "$IMAGE_NAME":test .
+    - bash docker push jacintoarias/myapp 
+  on:
+    branch: master
