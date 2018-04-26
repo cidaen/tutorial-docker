@@ -7,7 +7,7 @@ RUN useradd -ms /bin/bash runner
 
 USER runner
 
-WORKDIR /home/newuser
+WORKDIR /home/runner
 
 
 COPY very-useful.py /opt/
