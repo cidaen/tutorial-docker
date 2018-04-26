@@ -29,5 +29,5 @@ https://www.youtube.com/watch?v=CJ3Px7mI7kY
 
 Podéis encontrar el fichero PDF en el propio repositorio.
 
-
+https://github.com/cidaen/tutorial-docker/blob/master/slides.pdf
 
